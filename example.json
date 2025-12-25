@@ -3,7 +3,7 @@
     "context7-mcp": {
       "command": "npx",
       "args": ["@upstash/context7-mcp@latest"],
-      "cm": {
+      "codemode": {
         "allow": ["resolve-library-id", "get-library-docs"]
       }
     }

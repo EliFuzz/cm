@@ -34,8 +34,8 @@ export const getServer = () => server!;
 export const getToolRegistry = () => toolRegistry;
 
 export const init = async () => {
-  await getAllServerTools(JSON.parse(process.env.CM_SERVERS || '{}'));
-  server = new McpServer({ name: 'cm', version: '1.0.0' });
+  await getAllServerTools(JSON.parse(process.env.CODEMODE_SERVERS || '{}'));
+  server = new McpServer({ name: 'codemode', version: '1.0.0' });
   await registerTools();
   await server.connect(new StdioServerTransport());
 };
@@ -91,9 +91,9 @@ const getAllServerTools = async (input: Servers) => {
               )
             ).tools
         );
-        const filteredTools = cfg.cm?.allow
-          ? serverTools.filter((t) => cfg.cm?.allow?.includes(t.name))
-          : serverTools.filter((t) => !cfg.cm?.deny?.includes(t.name));
+        const filteredTools = cfg.codemode?.allow
+          ? serverTools.filter((t) => cfg.codemode?.allow?.includes(t.name))
+          : serverTools.filter((t) => !cfg.codemode?.deny?.includes(t.name));
 
         filteredTools.forEach((tool) => {
           const fullName = `${serverName}.${tool.name}`;

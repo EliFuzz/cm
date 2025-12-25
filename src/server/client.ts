@@ -1,12 +1,12 @@
 export interface Server {
-    command?: string;
-    args?: string[];
-    url?: string;
-    headers?: Record<string, string>;
-    env?: Record<string, string>;
-    cm?: { allow?: string[]; deny?: string[] };
+  command?: string;
+  args?: string[];
+  url?: string;
+  headers?: Record<string, string>;
+  env?: Record<string, string>;
+  codemode?: { allow?: string[]; deny?: string[] };
 }
 
 export interface Servers {
-    servers: Record<string, Server>;
+  servers: Record<string, Server>;
 }

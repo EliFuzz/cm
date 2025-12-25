@@ -1,5 +1,5 @@
 {
-  "name": "cm",
+  "name": "codemode",
   "version": "1.0.0",
   "description": "Code Mode MCP server - Execute TypeScript code with access to all registered MCP server tools",
   "homepage": "https://github.com/EliFuzz/cm#readme",
@@ -11,7 +11,7 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "bin": {
-    "cm": "build/index.js"
+    "codemode": "build/index.js"
   },
   "files": [
     "build",
